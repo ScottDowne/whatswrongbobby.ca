@@ -1,0 +1,103 @@
+<html>
+<head>
+  <title>What's wrong Bobby?</title>
+  <link rel="stylesheet" type="text/css" href="whatswrongbobby.css" />
+  <script src="popcorn.js"></script>
+  <script src="wordriver.js"></script>
+  <script src="whatswrongbobby.js"></script>
+  <script>
+    var whatswrongbobby;
+
+    Popcorn( function() {
+      var p = Popcorn( "#video" );
+
+      p.wordriver({
+        start: 0.01,
+        end: 0.8,
+        target: "left",
+        text: "omg"
+      }).wordriver({
+        start: 0.85,
+        end: 1.29,
+        target: "left",
+        text: "what's"
+      }).wordriver({
+        start: 1.29,
+        end: 1.6,
+        target: "left",
+        text: "wrong"
+      }).wordriver({
+        start: 1.69,
+        end: 2.3,
+        target: "left",
+        text: "Bobby?"
+      });
+      p.wordriver({
+        start: 0.01,
+        end: 0.8,
+        target: "right",
+        text: "omg"
+      }).wordriver({
+        start: 0.85,
+        end: 1.29,
+        target: "right",
+        text: "what's"
+      }).wordriver({
+        start: 1.29,
+        end: 1.6,
+        target: "right",
+        text: "wrong"
+      }).wordriver({
+        start: 1.69,
+        end: 2.3,
+        target: "right",
+        text: "Bobby?"
+      });
+
+      whatswrongbobby = new CBCPuzzle({
+        audio: "video",
+        source: "wordMix",
+        target: "wordTarget",
+        json: {"data":[
+          {"text":"omg","start":0,"end":0.8},
+          {"text":"what's","start":0.99,"end":1.2},
+          {"text":"wrong","start":1.29,"end":1.6},
+          {"text":"Bobby?","start":1.69,"end":2.3},
+          {"text":"I'm exhausted","start":2.5,"end":4}
+        ], "fake": [
+          "robot",
+          "secrets",
+          "kangaroo",
+          "haus",
+          "Mozilla"
+        ]
+        }
+      });
+
+      var playButton = document.getElementById( "play" );
+
+      playButton.addEventListener( 'click', function( e ) {
+        whatswrongbobby.play();
+      }, false );
+    });
+  </script>
+</head>
+<body>
+  <div id="left" class="panel"></div>
+  <div id="center">
+    <div id="container">
+      <video id="video">
+        <source src="whatswrongbobby.mp4" type="video/mp4">
+        <source src="whatswrongbobby.webm" type="video/webm">
+        <source src="whatswrongbobby.ogv" type="video/ogg">
+      </video>
+    </div>
+    <div id="puzzleWrap">
+      <div id="wordMix"></div>
+      <div id="wordTarget"></div>
+      <button id="play">Play!</button>
+    </div>
+  </div>
+  <div id="right" class="panel"></div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+#center {
+  float: left;
+  width: 50%;
+}
+
+#video{
+  padding-top: 20px;
+  width: 620px;
+}
+
+#container {
+  margin: 0 auto;
+  width: 620px;
+}
+
+.panel {
+  float: left;
+  width: 25%;
+  height: 100%;
+}
+
+#puzzleWrap {
+  width: 620px;
+  height: 330px;
+  padding-top: 20px;
+  background: url(background.jpg) no-repeat;
+  position: relative;
+font-family:Georgia;
+  margin: 0 auto;
+}
+
+#play {
+  margin: 0 20px;
+}
+
+#wordMix {
+  width: 590px;
+  height: 90px;
+  margin: 0 auto ;
+/*  border: 1px solid #000;*/
+  overflow: hidden;
+font-family:Georgia;
+font-size:16px;
+}
+
+#wordMix div {
+  float: left;
+  margin-right: 10px;
+}
+
+#wordTarget {
+  width: 590px;
+  height: 142px;
+margin: 0 15px 15px;
+/*  margin: 5px auto 10px;*/
+/*  border: 1px solid #000;*/
+}
+
+.cbc-puzzle-target {
+  float: left;
+  margin-left: 5px;
+  margin-bottom: 17px;
+  margin-top: 2px;
+  font-size: 16px;
+  min-width: 65px;
+  height: 30px;
+border-right:1px solid #c7c7c7;
+border-left:1px solid #c7c7c7;
+border-bottom:1px solid #a0a0a0;
+  background-color: #fff;
+font-family:Georgia;
+}
+
+html body {
+  background: url('hypnocat.gif');
+}
+
